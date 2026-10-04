@@ -1,0 +1,26 @@
+{
+  "name": "@zerotrace/chain-adapters",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/transport.js",
+  "types": "dist/transport.d.ts",
+  "exports": {
+    "./transport": {
+      "types": "./dist/transport.d.ts",
+      "default": "./dist/transport.js"
+    },
+    "./security": {
+      "types": "./dist/security.d.ts",
+      "default": "./dist/security.js"
+    },
+    ".": {
+      "types": "./dist/transport.d.ts",
+      "default": "./dist/transport.js"
+    }
+  },
+  "dependencies": {
+    "@zerotrace/evidence": "*"
+  },
+  "license": "Apache-2.0"
+}

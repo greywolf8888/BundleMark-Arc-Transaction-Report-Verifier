@@ -1,0 +1,62 @@
+import eslint from '@eslint/js';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config(
+  {
+    ignores: [
+      '**/dist/**',
+      '**/.types/**',
+      '**/coverage/**',
+      '**/node_modules/**',
+      'playwright-report/**',
+      'test-results/**',
+      'reports/**',
+      'output/**',
+      '.agent-state/**',
+      'arc-task-ledger-pack/**',
+      'dist-public/**',
+      '.zerotrace-backups/**',
+      'docs/ZeroTrace_GPT5.6_最终开发整合包_V11_20260831/**',
+      'ZeroTrace_监管取证级盘面结构分析_全量升级提示词包/**',
+      'scripts/split-*.mjs',
+      'scripts/trim-api-imports.mjs',
+      'scripts/fix-api-split.mjs',
+      'scripts/patch-runtime-stores.mjs',
+      'target/**',
+      'crates/**',
+      'apps/desktop/src-tauri/**',
+      'ZeroTrace_终局盘面分析_全量开发与实盘验收提示词包/**',
+    ],
+  },
+  {
+    files: ['**/*.{js,mjs,cjs}'],
+    languageOptions: {
+      globals: { ...globals.node, ...globals.nodeBuiltin },
+    },
+  },
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node },
+    },
+    plugins: { 'react-hooks': reactHooks },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' },
+      ],
+    },
+  },
+  {
+    files: ['**/*.test.{ts,tsx}', 'tests/**/*.{ts,tsx}'],
+    rules: { '@typescript-eslint/no-non-null-assertion': 'off' },
+  },
+);
