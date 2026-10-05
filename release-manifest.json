@@ -1,6 +1,6 @@
 {
   "schemaVersion": "atl-public-export-v1",
-  "sourceCommit": "577efdd5e64d77de260d0aaefd9b0ae667d1c277",
+  "sourceCommit": "b17ea96a689dfbdcb76015187de2be1a7d3ed67d",
   "version": "1.1.0",
   "published": false,
   "privateHistoryIncluded": false,
@@ -91,11 +91,11 @@
     },
     {
       "path": "docs/arc-task-ledger/NORTHFLANK_DEPLOYMENT.md",
-      "sha256": "35e8c569f2bbdaf0ac40a2ea5ca3da5f45321b58898a8f5d30724fd06396b9b2"
+      "sha256": "e566774608ccf5365eeeaa37f0a00193e831bb86b3e3171312c032bb46af6914"
     },
     {
       "path": "docs/arc-task-ledger/PUBLICATION_READINESS.md",
-      "sha256": "29bbeb802e1552d5fac1bf22712929594ba14182ce0ba06cf57001e776c1b0d3"
+      "sha256": "c318992e378b8e955c7574d6c8050b74a8c81248928ae764e19b9f09b91d7616"
     },
     {
       "path": "docs/arc-task-ledger/README.md",
@@ -158,6 +158,18 @@
       "sha256": "83d0d03e414b32f570ca17bac559b7b1b113e4eb443cac27c9caac6b944f5f79"
     },
     {
+      "path": "docs/arc-task-ledger/validation/northflank-deployment.json",
+      "sha256": "06c90a83cf7340ce92790bcc1f9d3be236812a41ae82d05ec87f9112cd2e55ca"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/northflank-local-anchor-20261005.json",
+      "sha256": "cd90a5b13f711756bdc0395dc17afcb3678bdd23054b6ca0234a83735f457916"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/northflank-preflight-20261004.json",
+      "sha256": "77a438cd306cbd813239d8e314a3fe1020aa3e95743bc23a8fce113e951f1230"
+    },
+    {
       "path": "docs/arc-task-ledger/validation/red-baseline.json",
       "sha256": "c896f7adeec21a40b039e5db7e4e907f476a74a0d8cbcd8647e8860bc9c74822"
     },
@@ -203,7 +215,7 @@
     },
     {
       "path": "infra/northflank/resource-intents.json",
-      "sha256": "df275e1d0e9f5f4112ef387064df3ccd5336c8e4f1c97710369582ba5f44747d"
+      "sha256": "fa9c84eda473245e944f1163564d9eafcdf489b6b810aa270b9a5483f8d188ee"
     },
     {
       "path": "infra/northflank/web-entrypoint.sh",
@@ -459,7 +471,7 @@
     },
     {
       "path": "scripts/northflank-deploy.mjs",
-      "sha256": "f7ee9e165a7f021551be83d50c3e3e070af878baf3b2cd22e2256d36c1b9f638"
+      "sha256": "b6ee9e2f90a8be0f9aa9554395c3163e274301f73355ebdc74a853eeb84d9e9d"
     },
     {
       "path": "tests/arc-task-ledger/e2e/ledger.spec.ts",
@@ -499,7 +511,7 @@
     },
     {
       "path": "tests/arc-task-ledger/unit/northflank-deploy.test.ts",
-      "sha256": "14105509b437922a7adec116457f5f33147b14aa92e671e82e6ec803682b496d"
+      "sha256": "a3c308b43c09e0ffbd804f56610df34eccfba2a25568ee5744ac8b305ea7fd62"
     },
     {
       "path": "tests/arc-task-ledger/unit/reader.test.ts",
