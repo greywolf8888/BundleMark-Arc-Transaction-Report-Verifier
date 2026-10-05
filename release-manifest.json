@@ -1,6 +1,6 @@
 {
   "schemaVersion": "atl-public-export-v1",
-  "sourceCommit": "a40ca3a34a1fba1e773177908fab2a74565f35bb",
+  "sourceCommit": "9258be19b64a410e5cdd6272610a81fe0b008ac9",
   "version": "1.2.0",
   "published": false,
   "privateHistoryIncluded": false,
@@ -67,7 +67,7 @@
     },
     {
       "path": "apps/arc-task-ledger-web/src/main.tsx",
-      "sha256": "3427229f779c7fde5fa5a2754803489292385057dbc3ca120f1b41b5122dba43"
+      "sha256": "23cfae28b12bcdc071bb7048cbc6899828220b8ef07b2b66c891cc970e1b6b82"
     },
     {
       "path": "apps/arc-task-ledger-web/src/model.ts",
@@ -539,7 +539,7 @@
     },
     {
       "path": "tests/arc-task-ledger/e2e/product.spec.ts",
-      "sha256": "2adcae1623f96cb911f66766d45ed372bf155f64cc23ce84fc5e3abaed06550e"
+      "sha256": "7036b6ea63b3b36acd26fdae4147f29954354b2a450ead991e747fda3372e34e"
     },
     {
       "path": "tests/arc-task-ledger/e2e/server.ts",
