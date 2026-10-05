@@ -2,9 +2,11 @@ import { hashPayload } from '@zerotrace/evidence';
 import { keccak256, type Abi } from 'viem';
 import abiJson from './abi.json' with { type: 'json' };
 import lock from './deployment.json' with { type: 'json' };
+import navigation from './navigation.json' with { type: 'json' };
 import { LedgerError, address, decimal } from './types.js';
 
 export const ABI = abiJson as Abi;
+export const NAVIGATION = navigation;
 export const DEPLOYMENT = {
   ...lock,
   adapter: address(lock.adapter),
@@ -18,7 +20,9 @@ if (
 )
   throw new LedgerError('LOCK_INVALID', '协议锁文件完整性核验失败。');
 export function configFromEnv(env: NodeJS.ProcessEnv = process.env) {
-  const rpcUrl = env.ARC_RPC_URL ?? lock.rpcCandidates[1]!.url;
+  const defaultSource = lock.rpcCandidates.find((source) => source.alias === lock.defaultRpcAlias);
+  if (!defaultSource) throw new LedgerError('LOCK_INVALID', '默认 RPC 来源未登记。');
+  const rpcUrl = env.ARC_RPC_URL ?? defaultSource.url;
   const rpcHosts = lock.rpcCandidates.map((source) => new URL(source.url).hostname);
   const port = Number(env.ARC_API_PORT ?? 8087);
   if (!Number.isSafeInteger(port) || port < 1024 || port > 65535)
@@ -30,6 +34,10 @@ export function configFromEnv(env: NodeJS.ProcessEnv = process.env) {
   if (!Number.isSafeInteger(maxJobs) || maxJobs < 1 || maxJobs > 10000)
     throw new LedgerError('CONFIG_INVALID', '任务采集上限不合法。');
   const scanBudget = decimal(env.ARC_SCAN_BLOCK_BUDGET ?? '20000');
+  const recentBudget = decimal(env.ARC_RECENT_BLOCK_BUDGET ?? '2000');
+  const proofBudget = decimal(env.ARC_PROOF_BLOCK_BUDGET ?? '2000');
+  if (BigInt(recentBudget) > 2000n || BigInt(proofBudget) > 2000n)
+    throw new LedgerError('CONFIG_INVALID', '最新变更与补证单轮各最多2000区块。', 400);
   const historyFromBlock = env.ARC_HISTORY_FROM_BLOCK
     ? decimal(env.ARC_HISTORY_FROM_BLOCK)
     : undefined;
@@ -58,6 +66,8 @@ export function configFromEnv(env: NodeJS.ProcessEnv = process.env) {
     databaseUrl,
     maxJobs,
     scanBudget,
+    recentBudget,
+    proofBudget,
     historyFromBlock,
     snapshotBlock,
     evidenceBlocks,

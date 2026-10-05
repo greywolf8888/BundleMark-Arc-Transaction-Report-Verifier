@@ -1,3 +1,3 @@
 # Arc 任务证据组件
 
-独立候选源码包。参见 docs/arc-task-ledger/README.md 与验收记录。没有公开部署、主网生产门禁或上游采用声明。
+独立候选源码包。参见 docs/arc-task-ledger/README.md 与验收记录。部署状态与实际门禁见同版本脱敏验收记录；导出动作本身不证明上线或上游采用。

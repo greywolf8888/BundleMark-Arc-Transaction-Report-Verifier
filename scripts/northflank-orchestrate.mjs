@@ -243,10 +243,29 @@ async function main() {
   const worker = uri(credentials.envs.POSTGRES_URI);
   state.cursor ??= crypto.randomBytes(32).toString('hex');
   state.readerPassword ??= crypto.randomBytes(32).toString('hex');
+  state.requestPassword ??= crypto.randomBytes(32).toString('hex');
   save();
   const apiUri = new URL(worker);
   apiUri.username = 'atl_api_reader';
   apiUri.password = state.readerPassword;
+  const requestUri = new URL(worker);
+  requestUri.username = 'atl_evidence_requester';
+  requestUri.password = state.requestPassword;
+  const registered = JSON.parse(
+    fs.readFileSync(
+      new URL('../packages/arc-task-ledger/src/deployment.json', import.meta.url),
+      'utf8',
+    ),
+  );
+  const defaultSource = registered.rpcCandidates.find(
+    (source) => source.alias === registered.defaultRpcAlias,
+  );
+  const rpcUrl = process.env.ARC_RPC_URL ?? defaultSource?.url;
+  if (!rpcUrl) throw new Error('默认 RPC 来源未登记。');
+  const rpcSource = registered.rpcCandidates.find(
+    (source) => new URL(source.url).origin === new URL(rpcUrl).origin,
+  );
+  if (!rpcSource) throw new Error('托管 RPC 来源不在登记范围内。');
   const runtime = {
     ARC_DATABASE_URL: worker.href,
     ARC_CURSOR_SECRET: state.cursor,
@@ -254,10 +273,12 @@ async function main() {
     ARC_API_PORT: '8087',
     ARC_INTERNAL_API_HOST: 'atl-api',
     ARC_INTERNAL_API_PORT: '8087',
-    ARC_RPC_URL: process.env.ARC_RPC_URL ?? 'https://rpc.mainnet.arc.io/?atl=northflank-20261005',
-    ARC_PROVIDER_ALIAS: 'arc-circle-public',
+    ARC_RPC_URL: rpcUrl,
+    ARC_PROVIDER_ALIAS: rpcSource.alias,
     ARC_MAX_JOBS: '1000',
     ARC_SCAN_BLOCK_BUDGET: '2000',
+    ARC_RECENT_BLOCK_BUDGET: '2000',
+    ARC_PROOF_BLOCK_BUDGET: '2000',
     ARC_HISTORY_FROM_BLOCK: process.env.ARC_HISTORY_FROM_BLOCK ?? '23388428',
     ARC_EVIDENCE_BLOCKS: process.env.ARC_EVIDENCE_BLOCKS ?? '23388428,23465819,23466663,23508410',
   };
@@ -267,6 +288,7 @@ async function main() {
     ARC_WORKER_DB_ROLE: credentials.secrets.USERNAME,
     ARC_READER_DB_ROLE: 'atl_api_reader',
     ARC_READER_DB_PASSWORD: state.readerPassword,
+    ARC_REQUEST_DB_PASSWORD: state.requestPassword,
   };
   const bootstrap = fs.readFileSync('infra/northflank/migration-bootstrap.mjs');
   const command = `node --input-type=module -e 'const r=await fetch("http://atl-api:8087/readyz",{signal:AbortSignal.timeout(10000)});if(!r.ok)throw new Error("API 数据库未就绪");await import("./apps/arc-task-ledger-api/dist/worker.js");'`;
@@ -313,6 +335,7 @@ async function main() {
   await request(p + '/services/combined/atl-api', 'PATCH', {
     runtimeEnvironment: {
       ARC_DATABASE_URL: apiUri.href,
+      ARC_REQUEST_DATABASE_URL: requestUri.href,
       ARC_CURSOR_SECRET: state.cursor,
       ARC_API_HOST: '0.0.0.0',
       ARC_API_PORT: '8087',
