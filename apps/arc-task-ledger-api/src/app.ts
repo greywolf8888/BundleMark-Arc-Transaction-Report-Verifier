@@ -16,6 +16,8 @@ import {
 } from '@zerotrace/arc-task-ledger';
 import { publicCoverage, publicDetail, publicRow } from './contract.js';
 import type { liveObserver } from './live.js';
+import { registerVerifierRoutes } from './verifier-routes.js';
+import type { transactionCollector } from '@zerotrace/arc-task-ledger';
 
 interface Cursor {
   run: string;
@@ -99,6 +101,7 @@ export async function createLedgerApp(
   secret: string,
   requestStore?: LedgerStore,
   live?: ReturnType<typeof liveObserver>,
+  collect?: ReturnType<typeof transactionCollector>,
 ) {
   const app = Fastify({
     logger: false,
@@ -108,6 +111,7 @@ export async function createLedgerApp(
   });
   const cursors = cursorCodec(secret);
   await app.register(rateLimit, { max: 120, timeWindow: 60000 });
+  if (collect) await registerVerifierRoutes(app, collect, store, secret, requestStore);
   app.addHook('onSend', async (_request, reply, payload) => {
     reply.header('x-content-type-options', 'nosniff');
     reply.header('cache-control', 'no-store');
@@ -131,7 +135,16 @@ export async function createLedgerApp(
   });
   app.get('/healthz', () => ({
     status: 'UP',
-    components: { readOnly: true, version: RULE_VERSION, interfaceVersion: 'atl-ui-v1.3.0' },
+    components: {
+      readOnly: true,
+      version: RULE_VERSION,
+      interfaceVersion: 'atl-ui-v1.3.0',
+      verifierInterfaceVersion: 'zasv-interface-v1',
+      verifierRuleVersion: 'zasv-rules-v1.0.0',
+      schemaMigration: 7,
+      releaseVersion: '2.0.0',
+      sourceCommit: process.env.ARC_SOURCE_COMMIT ?? 'LOCAL_UNDECLARED',
+    },
   }));
   app.get('/v1/registry', () => ({
     chainId: DEPLOYMENT.chainId,

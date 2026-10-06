@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SettlementCard } from './SettlementCard.js';
 import { label, money, value, type Detail, type Registry } from './model.js';
+import { flowLayout } from './flow-geometry.js';
 
 /** 联动只读服务器投影；本组件不计算或匹配链上金额。 */
 export function SettlementWorkbench({
@@ -41,6 +42,7 @@ export function SettlementWorkbench({
       y: i === 0 ? 160 : 160 + Math.sin(angle) * 105,
     };
   });
+  const graphLayout = flowLayout(flows, nodes, 320);
   const supportIds =
     metric?.evidenceIds ??
     flow?.evidenceIds ??
@@ -170,19 +172,10 @@ export function SettlementWorkbench({
                   </marker>
                 </defs>
                 {flows.map((f) => {
-                  const from = nodes.find((n) => n.address === f.from)!;
-                  const to = nodes.find((n) => n.address === f.to)!;
-                  const dx = to.x - from.x,
-                    dy = to.y - from.y;
-                  const length = Math.hypot(dx, dy) || 1;
-                  const offset = Math.abs(dx) > Math.abs(dy) ? 52 : 0;
-                  const mx = (from.x + to.x) / 2 - (dy / length) * offset,
-                    my = (from.y + to.y) / 2 + (dx / length) * offset;
-                  const inset = Math.min(70 / Math.abs(dx || 1), 25 / Math.abs(dy || 1));
-                  const edgePath =
-                    from.address === to.address
-                      ? `M ${from.x + 70} ${from.y} C ${from.x + 135} ${from.y - 90} ${from.x + 50} ${from.y - 115} ${from.x} ${from.y - 25}`
-                      : `M ${from.x + dx * inset} ${from.y + dy * inset} Q ${mx} ${my} ${to.x - dx * inset} ${to.y - dy * inset}`;
+                  const geometry = graphLayout.get(f.id)!;
+                  const edgePath = geometry.path,
+                    mx = geometry.x,
+                    my = geometry.y;
                   return (
                     <g
                       key={f.id}
@@ -213,6 +206,14 @@ export function SettlementWorkbench({
                       }
                     >
                       <path d={edgePath} markerEnd="url(#flow-arrow)" />
+                      <line
+                        x1={geometry.anchorX}
+                        y1={geometry.anchorY}
+                        x2={mx}
+                        y2={my}
+                        stroke="#668a26"
+                        strokeDasharray="3 3"
+                      />
                       <rect x={mx - 64} y={my - 25} width="128" height="50" rx="8" />
                       <text x={mx} y={my - 10} textAnchor="middle">
                         {label(f.kind)}
@@ -325,9 +326,25 @@ export function SettlementWorkbench({
               <dd>{flow.to}</dd>
             </dl>
             {flow.transactionHashes.map((hash) => (
-              <a key={hash} href={transaction(hash)} target="_blank" rel="noreferrer">
-                查看交易 {hash.slice(0, 10)}…
-              </a>
+              <div key={hash}>
+                <a href={transaction(hash)} target="_blank" rel="noreferrer">
+                  查看交易 {hash.slice(0, 10)}…
+                </a>
+                <br />
+                <a
+                  href={
+                    '/?' +
+                    new URLSearchParams({
+                      transaction: hash,
+                      taskId: detail.job.jobId,
+                      taskRun: detail.snapshotRunId,
+                      taskLeg: flow.id.replace(/:(DIRECT|PARKED|CLAIMED)$/, ''),
+                    })
+                  }
+                >
+                  用此任务条件重新核验交易 / Verify transaction with task conditions
+                </a>
+              </div>
             ))}
             <p>支持事件：{flow.eventIds.length || '当前时间线未包含；以回执为准'}</p>
           </>

@@ -1,6 +1,6 @@
 {
   "name": "arc-task-ledger-release",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": true,
   "type": "module",
   "license": "Apache-2.0",
@@ -17,10 +17,13 @@
     "arc:migrate": "tsx apps/arc-task-ledger-api/src/migrate.ts",
     "arc:worker": "tsx apps/arc-task-ledger-api/src/worker.ts",
     "arc:test:unit": "vitest run tests/arc-task-ledger/unit",
-    "arc:test:integration": "vitest run tests/arc-task-ledger/integration",
+    "arc:test:integration": "vitest run tests/arc-task-ledger/integration --no-file-parallelism",
     "arc:test:e2e": "playwright test --config tests/arc-task-ledger/playwright.config.ts tests/arc-task-ledger/e2e/ledger.spec.ts tests/arc-task-ledger/e2e/product.spec.ts --project arc-desktop && playwright test --config tests/arc-task-ledger/playwright.config.ts tests/arc-task-ledger/e2e/ledger.spec.ts tests/arc-task-ledger/e2e/product.spec.ts --project arc-mobile && playwright test --config tests/arc-task-ledger/playwright.config.ts tests/arc-task-ledger/e2e/workbench.spec.ts --project arc-desktop && playwright test --config tests/arc-task-ledger/playwright.config.ts tests/arc-task-ledger/e2e/workbench.spec.ts --project arc-mobile",
     "arc:test:live": "tsx scripts/arc-task-ledger-live.ts",
     "arc:start": "npm run start -w @zerotrace/arc-task-ledger-api",
+    "arc:replay": "tsx examples/arc-task-ledger/replay-bundle.ts",
+    "arc:reconcile": "tsx examples/arc-task-ledger/reconcile.ts",
+    "arc:client:typecheck": "tsc -p tsconfig.arc-examples.json --noEmit",
     "lint": "eslint . --max-warnings=0",
     "license:check": "license-checker-rseidelsohn --production --excludePrivatePackages --onlyAllow 'Apache-2.0;Apache-2.0 WITH LLVM-exception;BSD-2-Clause;BSD-3-Clause;CC0-1.0;ISC;MIT;0BSD;BlueOak-1.0.0;Python-2.0'"
   },

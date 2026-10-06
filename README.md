@@ -1,3 +1,3 @@
-# Arc 任务证据组件
+# Arc USDC 结算核验器
 
-独立候选源码包。参见 docs/arc-task-ledger/README.md 与验收记录。部署状态与实际门禁见同版本脱敏验收记录；导出动作本身不证明上线或上游采用。
+独立运行源码包，兼容既有ArcBounty任务。参见 docs/arc-task-ledger/settlement-verifier/USER_GUIDE.zh.md、CURRENT_RELEASE.md 与 VALIDATION.json。执行 npm ci、npm run arc:build，再配置既有PostgreSQL；本机原件复算 npm run arc:replay -- bundle.json，对账 npm run arc:reconcile -- bundle.json local.sqlite namespace business_reference。导出本身不证明上线、主网真实性或用户采用。
