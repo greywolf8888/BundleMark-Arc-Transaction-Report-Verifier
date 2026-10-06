@@ -1,7 +1,7 @@
 {
   "schemaVersion": "atl-public-export-v1",
-  "sourceCommit": "10592d9e963a24e8bb5af46d7fca983dc710a651",
-  "version": "1.2.0",
+  "sourceCommit": "92ed0409b888d410be242661dd51e91089c61954",
+  "version": "1.2.1",
   "published": false,
   "privateHistoryIncluded": false,
   "files": [
@@ -23,11 +23,11 @@
     },
     {
       "path": "apps/arc-task-ledger-api/package.json",
-      "sha256": "5e08fe492d8c5a0497f8367976f88ab2db51839df4933852ea3dc66ca8bf7c34"
+      "sha256": "8aa13a856c7cbdbfcccd5ebbe5fe95477096b42fc37ab3752870170f023824b3"
     },
     {
       "path": "apps/arc-task-ledger-api/src/app.ts",
-      "sha256": "7e09dffdbf7bfe6d4edd9037c43d318d34e68c4512dc624f8af44ded20c59752"
+      "sha256": "08c8e646ce0d631dd2eb606caf4e4846c00614780ec0dbf6ce021116e716e7c4"
     },
     {
       "path": "apps/arc-task-ledger-api/src/contract.ts",
@@ -43,7 +43,7 @@
     },
     {
       "path": "apps/arc-task-ledger-api/src/storage.ts",
-      "sha256": "a69a9a6d6cabdde8cb4a5134e7641a10f82fc3cd52ceda9362586a08895137b7"
+      "sha256": "b486f459bc2655b61c3b36501214f92de9cdaf56a4782e19e2f48578b2419579"
     },
     {
       "path": "apps/arc-task-ledger-api/src/worker.ts",
@@ -59,23 +59,27 @@
     },
     {
       "path": "apps/arc-task-ledger-web/package.json",
-      "sha256": "128852305e41a6d2bb096e220f64108461f35e72f46603d4cadebaa2736c0909"
+      "sha256": "b9cb24bf128710674c13ad43983a93f91500ada9242920e56967d3c80f2b365a"
     },
     {
       "path": "apps/arc-task-ledger-web/src/SettlementCard.tsx",
-      "sha256": "1531880293ab640814ffdbb0b7d36731446040b6c32a4b3071c6207e18f1d96d"
+      "sha256": "01cbe5503b4956bef3b20ed76ae08be2df0629956ceb03a692345db1a29a4011"
+    },
+    {
+      "path": "apps/arc-task-ledger-web/src/SettlementWorkbench.tsx",
+      "sha256": "6c2ea27c9417fa7c21f70a48981fc75f7563ef162c0f074882302eac8ae1927e"
     },
     {
       "path": "apps/arc-task-ledger-web/src/main.tsx",
-      "sha256": "5b82e1fd483140cf3ae5167bcbb428b83a161015d45373683b89032358e40087"
+      "sha256": "697c9522bcd35bebe34f887f01f80fb55c410ee8f2e3574ed38d8d34f17428b1"
     },
     {
       "path": "apps/arc-task-ledger-web/src/model.ts",
-      "sha256": "16b4ca0198aadba566a977baa450b7302e0f06478f03b0f4cc337ac81cfdfe06"
+      "sha256": "e77f28b9fe6d934a63702bdd591097e8c94bf376d47c86f2d8b854ab6aca9c9a"
     },
     {
       "path": "apps/arc-task-ledger-web/src/style.css",
-      "sha256": "76f23c0d7b3ccfb247d94de587f294419ef0f446d05b898bc0501720e336a6a3"
+      "sha256": "911d496febe360ac7025370befd728adb3891092319edea8f7c1b2091c97da6d"
     },
     {
       "path": "apps/arc-task-ledger-web/tsconfig.json",
@@ -95,35 +99,47 @@
     },
     {
       "path": "docs/arc-task-ledger/FINAL_ACCEPTANCE.md",
-      "sha256": "6a1424ee2fe818c4175bc178784fec6e151576c932b870fb792af6a10ffbb1ec"
+      "sha256": "394d7bbc94336c4efe5d3570aea5d92eecd9180a9e67172fdc095c34318ed53a"
     },
     {
       "path": "docs/arc-task-ledger/NORTHFLANK_DEPLOYMENT.md",
-      "sha256": "88418c58202c32bd07814640d4aa88b7291aae0950b54bfdd7a62be9f15a2dab"
+      "sha256": "1d1d93f3f37a493ff4e7d5fca9b5f250139f2ddcd62adec33682250c110ef0c5"
     },
     {
       "path": "docs/arc-task-ledger/PRODUCT_CORRECTION.md",
-      "sha256": "b6fd37492619159cb7e3e6ca90c5390e654a070e1a4a6d6d6f8e85587b50037a"
+      "sha256": "d614a2d36f68acbbfb904497b27b7053402ba0d5b5ee829e0a8161ebf097e2d3"
+    },
+    {
+      "path": "docs/arc-task-ledger/PRODUCT_DELIVERY_20261006.md",
+      "sha256": "cd303e848b4a7f3f70553f5d225d0533b44b9543cf434b324bd78268b1e6d0ee"
     },
     {
       "path": "docs/arc-task-ledger/PUBLICATION_READINESS.md",
-      "sha256": "4edc7b63cca0a6df50a0c96962945c529cb2a129252d339860161dac52c417ac"
+      "sha256": "acd658200580855d1702e3d7eeaff093eb26e02c8a8b290abd27b9f24fa33e8e"
     },
     {
       "path": "docs/arc-task-ledger/README.md",
-      "sha256": "a4ee57197e49f0c92d59467023df5cd00ec287bb443291ef35fa15f80fcd66f3"
+      "sha256": "348105e2d1cc7d114e27c4ff9cb7cc04a61374ed14495a32e7eec5cfc3786204"
     },
     {
       "path": "docs/arc-task-ledger/REPAIR_ACCEPTANCE.md",
       "sha256": "c4bc46bd93436e4e29b61cb4dd0d74a14cece2260fb88d9615c9016b096f568b"
     },
     {
+      "path": "docs/arc-task-ledger/UI_AUDIT_CORRECTION_20261006.md",
+      "sha256": "9fec2fe70820b34bc45b344cf0e2696f232ee54ca0731db1de491b0f596fac5d"
+    },
+    {
       "path": "docs/arc-task-ledger/UPSTREAM_LICENSE.txt",
       "sha256": "bd17848d7a5128d1b07547b13ce2e1fdc64e5c277f29e66d04155f1c9e2b4544"
     },
     {
+      "path": "docs/arc-task-ledger/V121_ROLLOUT_PLAN_20261006.md",
+      "sha256": "1e49d8165d285c060154b46aca16e937e40539e2ce3a3761d9e4368ac4e4d8fb"
+    },
+    {
       "path": "docs/arc-task-ledger/openapi.json",
-      "sha256": "13f83113f234b0c61491321104e80313e4a732922d132c0fcb41bd50966c455b"
+      "sha256": "48be2d96db39ff7c47093b9e1791504b029d5e989f36ef0db58cffae22ddbc4c"
     },
     {
       "path": "docs/arc-task-ledger/validation/api-restart-clean.json",
@@ -210,6 +226,102 @@
       "sha256": "fa9c84eda473245e944f1163564d9eafcdf489b6b810aa270b9a5483f8d188ee"
     },
     {
+      "path": "docs/arc-task-ledger/validation/product-v120/acceptance.json",
+      "sha256": "a414c269a3948ebfcc85a2d056ebb513eb1d93e4961bdb0c8df79d6e5a6bc69c"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/api-worker-source-compatibility.json",
+      "sha256": "693acb4133f44abf885b964eb0e1c4cb3f21752011acb5c9e83dd9d5f4782639"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/chain-deployment-proof.json",
+      "sha256": "95a2374a96e1f2a931edc70496e87755f4d00fae78a9d5b5b32492009a83ea85"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/checks.json",
+      "sha256": "873aec0897889fecfb1f6718e3f90e80de85b64444508d035cbe6829d10106d7"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/commands.json",
+      "sha256": "66165a73721f209b4dd295eeb94611757512a3160e922dd78d4a04902494d123"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/cron-proof.json",
+      "sha256": "08e86b81af92bd8ab24daab476ad96fec8de6943070e84a8d58e4b4911a6464a"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/delivery-files.json",
+      "sha256": "9518b0e994db2e358f2c68e46f54a730e91406d9798ec3bc0b5f8d66b84102c6"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-desktop-detail.png",
+      "sha256": "639a4f2519d66df15205955a2d6073cc430b886f23d2543a13a78d7adb6b1448"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-desktop-report.png",
+      "sha256": "e5af6581f80f0d2d3b16a2ac075c418e58dc4de62be546e63c7bdfde512b7621"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-mobile-detail.png",
+      "sha256": "8ae78819bd1b4271dc01cfa22e7d1a678c6b40c9b699e81056418ae33d445b10"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-mobile-first-screen.png",
+      "sha256": "f74f279f5c4f3220208fdf86a2d68204464987747d40c0d76b826a5e595f07d0"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-mobile-report.png",
+      "sha256": "947cb05644ee2015e8d34184be1bf00d0a197764b91f1fbb9e87ac0c316fea79"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/hosted-product-proof.json",
+      "sha256": "fb5bfb2f878fa91b6b55131be40f4ec6e818d266bbe120734cf5a1d14b34b37d"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/job-runs-safe.json",
+      "sha256": "565b77f0103904bea47fca04873e04bc780794ba243b17c407d662876a3b11d4"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/mainnet-current.json",
+      "sha256": "2df94ea0d83c0cd3fdb5ca7667e1de5cf8fb352339c325eb5603d176d31d12ee"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/mobile-first-screen-red.json",
+      "sha256": "da2d308565e5c28cac5a39a3d6295dc202f065f6ee381a9c0c3584809170adf0"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/queue-after-sync.json",
+      "sha256": "9666b12c2200d1a0345b2ed785c85f7feea432d46baf750eb5e175e2b278b11d"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/queue-before-sync.json",
+      "sha256": "afcf9d88b2b2daf22f154aa8b606791aa21421d66a6871269c211489f5455260"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/red-baseline.json",
+      "sha256": "381cbed67a4ab40e2273b5a7e70179c3966434be73308846f56b2f2b8f79cced"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/resources-current.json",
+      "sha256": "2e5bf0a619915867ae071e43caf0cdbd1e3958e77cbcddcad63ee73a6b183157"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/restart-proof.json",
+      "sha256": "b2973ff41c913a6059d4c3cc6cc30ae1e4367f720a000d9a2b188fc0921f5b8a"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/source-current.json",
+      "sha256": "eb5a9ea45646898c58195db78246801f86a0efe92fa382b5fff7cdc86cbb8be1"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/source-map.json",
+      "sha256": "82f7284a6b0bc0414e41f5583f9f310c2d231bc6a6587b994590df79d850da5e"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/product-v120/web-assets-proof.json",
+      "sha256": "b29144637ab253492a27e3d642d71440bfaf9c3dcf644d4735db356f57564649"
+    },
+    {
       "path": "docs/arc-task-ledger/validation/red-baseline.json",
       "sha256": "c896f7adeec21a40b039e5db7e4e907f476a74a0d8cbcd8647e8860bc9c74822"
     },
@@ -222,16 +334,196 @@
       "sha256": "4479472fe44d79ef3a49c4ba05108e6ed70e88a2f0d51e3bf8cab23661149f04"
     },
     {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/acceptance.json",
+      "sha256": "621219b56feb5a080fe3fad87e60c54278fcbefbf8d0747a9fbf544f28138fb8"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/before-safe-acceptance.json",
+      "sha256": "039dff9b6fae3ce5c5b55fe4a203484dcf15ee441290e6fb8a29f1c4016f9d4d"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/before-safe-commands.json",
+      "sha256": "1e8e5bc0a37feaf37ad349e39d31e7b0b126dcbf37ca6b6b6d73f5b35218555b"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/before-safe-source-map.json",
+      "sha256": "beb0e81c0e90803fbcbd1070894646aabcda1617a75ee2bace9a76c5e2e7a98e"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/commands.json",
+      "sha256": "cef9eb05a3d9cb4db8eb935114a36bbe37ff503a14676b4255739fad3c6a8f39"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/independent-first-audit.json",
+      "sha256": "7dc6e9f0eacabdc6f8bd8dda89ef97a2656fdeb23eef6f628b8283501bb13d97"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/independent-first-commands.json",
+      "sha256": "9239ddc1e6dc9d8a3c9adc3dd38cbe598caeccd721ed8598e03220b152731cf4"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/independent-safe-audit.json",
+      "sha256": "71bb55dc3bb3b98fc73d60e98d7711e69fa498e998239863bdd9c4b5c8b8eca1"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/independent-safe-commands.json",
+      "sha256": "37a74aec88f760e0a6a424d0e99aac441d50daf9dca657dacd0090b4d789490b"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-1-1440x900.png",
+      "sha256": "b5e727532f7d78923ff09d9c7f56a2f72258c53653b9f36e84a842d4285640a1"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-18-1280x800.png",
+      "sha256": "e528b73e93c0b97440dd59e5f93b91d37d47f8f2965889f96d50eceff8f61ce0"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-18-1440x900.png",
+      "sha256": "e63847ef0da7171734b556ae29cb65a5480bddfe94ed74da5c3a6aa6caa32cea"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-18-390x844.png",
+      "sha256": "608352ad284e70ea5320d85987514770a976d951c6159e8468060ff8b4a00449"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-browser.json",
+      "sha256": "1dc2eb278d3528731d1b75ed41ca1edd91102fac39355e786de369d87213edef"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet-replay.json",
+      "sha256": "f1795d2376013248c7a4bc55080086d237fdd57b2733f378f387c63c011db1ee"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/mainnet.json",
+      "sha256": "b446bb5522ddc73c5bf54f806960a2564d2f4913f9dbf6b6a24f05b10d47c90e"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/package-final.json",
+      "sha256": "e091ee2f8c54660c8a840b7d6ebe0961cfb21c7a3346c17279d8a9d605ebbb3d"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/export-recovery.json",
+      "sha256": "67e36ded1f35c022a7fbc9121a649b2db62116b9faba131466365d31599891a2"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/independent-rollout-current-commands.json",
+      "sha256": "dea1b990b1c3c526055c61f54256bd02234a4fd6beac84121319e5b1fb67e1f5"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/migration.json",
+      "sha256": "acdd78833be79885a4f3cc446c1cd867c1853e433cc9e40ee199f10889c4a284"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/public-0.json",
+      "sha256": "5cc87655ec042eb0a3053866e7ca8ba59507c18f2d0a3dc268ce8d1a517b8b25"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/public-1.json",
+      "sha256": "e9e89569630f3596ab727b0fc761c75e5719805cf60f2f7f89454de8a77828dc"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/public-2.json",
+      "sha256": "e390600b9333f43dd1a95432bce78545e3a4f3041f3811153b76f35516fa5a3f"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/public-3.json",
+      "sha256": "42574b9cfd5fcac68f4913d96c8bc498d2dfa47a66d950150da6ccb656068c62"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/public-5.json",
+      "sha256": "bb06b8ca7dbb47e28821dc95a9b3c767044b28b267145fd50119e55e8158d534"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/readiness.json",
+      "sha256": "16d1dbb34b9abed5bc7ec82789e34cb09c4a0b60fd7c8511c02d2db42c1b9433"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/receipt.json",
+      "sha256": "37d8740b76f0cdf23ea3d49f763856bcd86af168fc60cd45668a91bc986fc3b2"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/rollout-code-commands.json",
+      "sha256": "343b6f66f35a8b5cc8f64fff9184924315727327e840ae2fe50014ed88aeb997"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/rollout-equivalence.json",
+      "sha256": "9c0fc89275249a7354dc23ba712217c1f20150d9c93135d07316482cb53fee90"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/rollout-rust-commands.json",
+      "sha256": "fff3032567069d2095f1b8996bdc4ad2e288283bb2e34557f4808aa4e3f0e5a4"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/rollout-tests-commands.json",
+      "sha256": "9d6cd70719f739a7b05515c2ca3ca221236b5a5485518dd771a1a18825541953"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/rollout-preflight/source-changes.json",
+      "sha256": "5b637b5d28b19ff0e55d3d23fa1d167f1bda9b26667866a926dc669a689b4001"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/source-map.json",
+      "sha256": "c17181c49293a6cce945a5a6f7819463771703fd5d1c68555958d435eccab873"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-104-1280x800.png",
+      "sha256": "161d302b02a61f460c816f296336ca884c27df45920f912c5ea20f975e9a4052"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-104-1440x900.png",
+      "sha256": "92ecd41625b097d5151ddf8a882a93f6a05b43f356892428984778aeac3d9666"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-104-390x844.png",
+      "sha256": "b3ba27b571e747894ac3f224028ec0e78346d222066a029a7a8e07242aa27934"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-108-1280x800.png",
+      "sha256": "7bd9cc29c49ec3fdf7bd319cf250fde83efb623d8fdc9933a25b5d9edcffb3ba"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-108-1440x900.png",
+      "sha256": "c993b938467eee4b67e623ccff48dc1dca1d9585e2992f3bafd084ee7399910e"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-108-390x844.png",
+      "sha256": "bb9ebdfcbd72b09c2bb827b946b5aab049ee1e059b050ec81589f3899b63cde4"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-19-1280x800.png",
+      "sha256": "a8b803642c88590d811f316423721288734b074e868bcb530a906745e40d7700"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-19-1440x900.png",
+      "sha256": "f6652fe9ecd9e2e9d023ec4bdec806b3203a4f472476059f8428c8a8f5d76108"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-19-390x844.png",
+      "sha256": "95cf7c43122914787f5cb2c7ac994cdb4157974f1119b7df459c5d891e995d3c"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-8-1280x800.png",
+      "sha256": "93379c300b19a8eee643b50846f01406ed429b7bbd30aa6243b6444b8deed8c2"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-8-1440x900.png",
+      "sha256": "a66a87e9e7f7031f6c34680485b6acae91fa0c797a0c24f892b7ee7a4b1f0928"
+    },
+    {
+      "path": "docs/arc-task-ledger/validation/ui-audit-v121/ui-8-390x844.png",
+      "sha256": "df3d8baf8b4351324eca5826985c4108c51fc1f4052f2cf8714147ecd1fec61b"
+    },
+    {
       "path": "eslint.config.mjs",
       "sha256": "4a98df46d59f7bafdbf4695aa54f49b89ce8f300db1047b97682ec5aaa71f332"
     },
     {
       "path": "examples/arc-task-ledger/README.zh-CN.md",
-      "sha256": "db0bdad9a247f80544565ca97efd1606dc9edda0f4b2a1d0b0cc5e4227a70fe8"
+      "sha256": "070c92cd9063b3f2c62a9e021f21d30be806f22dbd9df46ec12702c863bd7574"
     },
     {
       "path": "examples/arc-task-ledger/consumer.ts",
-      "sha256": "42f226a233293b60420c66a9baf133072d9e44412fc54170634a4e769e978389"
+      "sha256": "0a80d8dbbfa68b532342c48c29233b099524a238a5e6a62d7ff08ff3d11c040c"
     },
     {
       "path": "infra/arc-task-ledger/.dockerignore",
@@ -255,7 +547,7 @@
     },
     {
       "path": "infra/northflank/migration-bootstrap.mjs",
-      "sha256": "989328b2d92dd70b28c7e9ee4ebd3560775b719c049c9ef7bf682c8a638ef1cf"
+      "sha256": "0d576a35abc3a004c9e87f744cd91490f4856b12bf668e86ab08f2f448c37148"
     },
     {
       "path": "infra/northflank/nginx.conf.template",
@@ -263,7 +555,7 @@
     },
     {
       "path": "infra/northflank/resource-intents.json",
-      "sha256": "fec000901e5a87371a52cb6fb69a680493844f80b06db8905347ae3d0e27b4b7"
+      "sha256": "025f23b5677f088b37ba21c3ceb34b6641958ad4c2b45488545c7580d52850f5"
     },
     {
       "path": "infra/northflank/web-entrypoint.sh",
@@ -271,11 +563,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "8d246867523e7b4ffd756784c73db67c54e4927cc49bff82c07100d13eeba849"
+      "sha256": "21c345eff5449468a8fcda41c2624ac8a7327c9790b6a77a14a17dd7a5846912"
     },
     {
       "path": "package.json",
-      "sha256": "df5b27fd7fb2400cdc7106a1c51e9653eef6ad8aec5f879e8810d97778a6ffcd"
+      "sha256": "56952055eaa5b574993a650cf11c24afc4c9e23a2a5697beb1ec9f1e3e4cf017"
     },
     {
       "path": "packages/arc-task-ledger/AGENTS.md",
@@ -283,7 +575,7 @@
     },
     {
       "path": "packages/arc-task-ledger/package.json",
-      "sha256": "d9296de9db414fcbf07326cd69a2d4484932138ad964d8569d6c6004b125d087"
+      "sha256": "ae712b65478342222905b31df41a562f6d64979611dbeb865960b1e8ad49652e"
     },
     {
       "path": "packages/arc-task-ledger/src/abi.json",
@@ -298,8 +590,12 @@
       "sha256": "8d55eb37b20ab2d6bb46a07bc72f1fa552978edddf736a6974bb23bea1a7e003"
     },
     {
+      "path": "packages/arc-task-ledger/src/enrichment.ts",
+      "sha256": "072bf69720f05d681b84aa6f30f168e59b83d26ee122dcde2d16830ebeb344e3"
+    },
+    {
       "path": "packages/arc-task-ledger/src/index.ts",
-      "sha256": "c917bddad39802467c4098b3a216dfa80dbdf585decad5834744e80cb69ca164"
+      "sha256": "32a3d548c6573b3670fb8c227a83af10374c729d9b088d7c0cf0f91c491c3b51"
     },
     {
       "path": "packages/arc-task-ledger/src/live-result.ts",
@@ -323,19 +619,19 @@
     },
     {
       "path": "packages/arc-task-ledger/src/result.ts",
-      "sha256": "fc1eb49c7b56a56ed9348527bd990cc0d540b61e2e6fd7ccce267cff60d6183d"
+      "sha256": "6020b64d7f5326a69f31417a04f51aca39bfbb749ebfd4db64d737c0dcb0335f"
     },
     {
       "path": "packages/arc-task-ledger/src/settlement.ts",
-      "sha256": "41e52ffb8fee370e8b4dbb543b204a8bdca45f6fbdb8823d23c74da0728256c6"
+      "sha256": "dccdd29d9a34b80be02cceaddaa036022b21bb7c1519656920b38b5d826019f7"
     },
     {
       "path": "packages/arc-task-ledger/src/storage.ts",
-      "sha256": "9c6bd15a72b274c294a99c9f433462964ce647cf6253c42525cf07d0826058a4"
+      "sha256": "3e5a858eda0a33a0b558c95703fa07765908feca666ef312ff86100c92d37483"
     },
     {
       "path": "packages/arc-task-ledger/src/types.ts",
-      "sha256": "0dfe582e356c159945960fcfff5f74f00dd67f00bdd9a0255ed8c9e1b0dda662"
+      "sha256": "dd6a9ad164a0be06e9ea484a4c516c340d85fe88268106d676c983bc5e695362"
     },
     {
       "path": "packages/arc-task-ledger/src/worker.ts",
@@ -539,11 +835,15 @@
     },
     {
       "path": "tests/arc-task-ledger/e2e/product.spec.ts",
-      "sha256": "56054ecdd8ede8bb4a9b1d79c3806f79a480f2d074c6b9159d7e2fb36fd5e50e"
+      "sha256": "41b00c86e07efec34e3b478ca1b5e962bd5b92463ebc60321771f74131407c6b"
     },
     {
       "path": "tests/arc-task-ledger/e2e/server.ts",
-      "sha256": "b73c7e4893bba1848893995930db75379b6d6cf59fea22fa6e4dfcff011e3edf"
+      "sha256": "bb6ac592923caf541720c3ce32814663b995599f102ac29a4f56bbbd53819309"
+    },
+    {
+      "path": "tests/arc-task-ledger/e2e/workbench.spec.ts",
+      "sha256": "483f581029f7d7553fc39c51d8549cd3c3cf154535f21517ddf8d978615bcf78"
     },
     {
       "path": "tests/arc-task-ledger/fixtures/helpers.ts",
@@ -555,7 +855,7 @@
     },
     {
       "path": "tests/arc-task-ledger/integration/database.test.ts",
-      "sha256": "755ee3c3a3939be78570786d660e024362be3cffd27b359afe3eeeccd51b0eaa"
+      "sha256": "f608a094f10be4010c4bf9456405f1ab70bbedefb7b9c176b780758408b0a269"
     },
     {
       "path": "tests/arc-task-ledger/playwright.config.ts",
@@ -568,6 +868,10 @@
     {
       "path": "tests/arc-task-ledger/unit/contract.test.ts",
       "sha256": "72d86522aaf2da70ce9aa24957b643292c4989e922d0bdcd67a73cca7d4d7bd3"
+    },
+    {
+      "path": "tests/arc-task-ledger/unit/enrichment.test.ts",
+      "sha256": "262c143c8d429605c412241cb63466eeff463e0ec52aaf12ac405777054d6cef"
     },
     {
       "path": "tests/arc-task-ledger/unit/live-result.test.ts",
@@ -599,7 +903,7 @@
     },
     {
       "path": "tests/arc-task-ledger/unit/result.test.ts",
-      "sha256": "cb617640d488146be89650dfbd55f47e5b0a7582175962e428a2047159d2c5d6"
+      "sha256": "197bf87d00e94ec01678cbd7835b6b9495031e397c39f44edfdaa52e65dc42b9"
     },
     {
       "path": "tests/arc-task-ledger/unit/security.test.ts",
