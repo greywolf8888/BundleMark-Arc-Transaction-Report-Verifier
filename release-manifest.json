@@ -1,13 +1,15 @@
 {
-  "schemaVersion": "atl-public-export-v1",
-  "sourceCommit": "0bf0c339eeeefa76eff53b67ac33ddeee4ac764c",
+  "schemaVersion": "bundlemark-source-manifest-v1",
   "product": "BundleMark",
+  "repository": "https://github.com/greywolf8888/BundleMark-Arc-Transaction-Report-Verifier",
+  "applicationCommit": "56218638e8edf6a3494cee22671b301f3a36ee79",
+  "documentationBaseCommit": "8d7729aedb611b564f9d64eee1ec1472796878be",
   "version": "2.0.0",
   "packageVersion": "1.3.0",
   "interfaceVersion": "atl-ui-v1.4.3",
-  "published": false,
+  "published": true,
   "privateHistoryIncluded": false,
-  "historicalDeploymentParent": "45c552368fbd3b8b18ef17cf49ac6b00d15f7f1e",
+  "digestScope": "Git blob bytes in this source tree; manifest excluded. Archive commit is recorded in the release attachment.",
   "files": [
     {
       "path": ".dockerignore",
@@ -39,15 +41,15 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "a87bcafa7866d3e9368c0b7217226b3dcde4b290b41fd53935fe3492d745521a"
+      "sha256": "c395765dfa9976222a8c53d76e1ac3c9516d5e7aab24a5110e6193012f543021"
     },
     {
       "path": "README.md",
-      "sha256": "e59f558790c56394fbd01675f1318eecc2bd6293d3679c2f1ecab4afa8754c15"
+      "sha256": "0e366641dc364f96ebea7c3122165fb6bac2c75b239f64987e0151a7d8d6289e"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "1668138b78ab7b6a4e80880c7cf359fa68d3770aff64c4a3a87b75a83ba5553a"
+      "sha256": "5a4e0e55b4ed01dc9e25831cf676f5557f2415b62d2c12e2c488f4490dd6f7ab"
     },
     {
       "path": "SECURITY.md",
@@ -1510,8 +1512,12 @@
       "sha256": "9268b90166df880e9e6fb97c4165fd2361f7a4aa4522570b160c0b3b3887697f"
     },
     {
+      "path": "docs/project/DELIVERY.en.md",
+      "sha256": "14c4b9b72e8a071e3a1aad45c25e32d09892198896864e71b6bbf82a4e1a4bd3"
+    },
+    {
       "path": "docs/project/DELIVERY.zh-CN.md",
-      "sha256": "bdc17cb074150021f701e1733ce57ead9f2b3f1f5a8b151a8ec14242bee314cd"
+      "sha256": "804fbd4aad79fe3a30d2cb786c0d6919059d6e7b8e507b377fe0ef1b8e9cf603"
     },
     {
       "path": "docs/project/HISTORY.json",
@@ -1527,15 +1533,19 @@
     },
     {
       "path": "docs/project/OPERATIONS.en.md",
-      "sha256": "68dbf706c747f0cc57bff4167d192da79049ca909437674bcb6d067c66ae81a6"
+      "sha256": "28037c3d58bbd83153a45e3931682344b5574d22d424eaaea242a8dedcc0c2ad"
     },
     {
       "path": "docs/project/OPERATIONS.zh-CN.md",
-      "sha256": "db67e91cfabfd2b4cef168ee86f597d5bf90f304b72d8b16e4621c2a7904438c"
+      "sha256": "19fbf1e159c00ec35ba8a4078dda4d0a8253d14eca7a84881c66e4ce43968b85"
     },
     {
       "path": "docs/project/ORIGINAL_ASSETS.json",
       "sha256": "a48675a68d7e5e9c32613004b283ed46cb9d69d514a61f2788c96a14ea54a809"
+    },
+    {
+      "path": "docs/project/VALIDATION_20261008.json",
+      "sha256": "30c6a2f7a949bcec45a175b72d69fb37ed3a97f961ba993df6f4c7fcb544c6ad"
     },
     {
       "path": "docs/project/hero.svg",
@@ -2057,6 +2067,5 @@
       "path": "vitest.config.ts",
       "sha256": "7c01894fb6bdd49971874abbdc6992ca2545fd5d2c74560ed2e9e98ccde575b7"
     }
-  ],
-  "note": "Digests describe exact Git blob bytes. Publication/deployment are recorded separately in delivery receipts."
+  ]
 }

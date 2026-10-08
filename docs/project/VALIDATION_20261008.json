@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "bundlemark-delivery-validation-v1",
+  "recordedAt": "2026-10-08T12:03:50.247987+00:00",
+  "runtimeCommit": "56218638e8edf6a3494cee22671b301f3a36ee79",
+  "documentationBaseCommit": "8d7729aedb611b564f9d64eee1ec1472796878be",
+  "scope": "Independent repository and branding delivery. Historical full mainnet acceptance is not rerun or implied.",
+  "independentLocal": {
+    "checks": [
+      {
+        "name": "format",
+        "command": "node node_modules/prettier/bin/prettier.cjs --check README.md README.zh-CN.md CONTRIBUTING.md SECURITY.md .github docs/project apps/arc-task-ledger-web/index.html apps/arc-task-ledger-web/src/main.tsx apps/arc-task-ledger-web/src/i18n.tsx apps/arc-task-ledger-web/src/style.css tests/arc-task-ledger/e2e/verifier-ui.spec.ts",
+        "at": "2026-10-08T11:38:04.309Z",
+        "finished": "2026-10-08T11:38:04.993Z",
+        "exitCode": 0,
+        "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+      },
+      {
+        "name": "lint",
+        "command": "npm run lint",
+        "at": "2026-10-08T11:38:04.999Z",
+        "finished": "2026-10-08T11:38:26.008Z",
+        "exitCode": 0,
+        "sha256": "a29d554c6708d6fb6d77b341f4bd59659b07fcee9e9a6b35ba01f20fc0222baa"
+      },
+      {
+        "name": "unit",
+        "command": "npm run arc:test:unit",
+        "at": "2026-10-08T11:38:26.014Z",
+        "finished": "2026-10-08T11:38:31.742Z",
+        "exitCode": 0,
+        "sha256": "c25420ded868687cc243da67665e592c762ea44b37458d388dd6009088ead69d"
+      },
+      {
+        "name": "client",
+        "command": "npm run arc:client:typecheck",
+        "at": "2026-10-08T11:38:31.747Z",
+        "finished": "2026-10-08T11:38:33.288Z",
+        "exitCode": 0,
+        "sha256": "5c681c685b68667b4963456c53c81c661edf5382632c611194541cc5ea43d905"
+      },
+      {
+        "name": "license",
+        "command": "npm run license:check",
+        "at": "2026-10-08T11:38:33.293Z",
+        "finished": "2026-10-08T11:38:36.647Z",
+        "exitCode": 0,
+        "sha256": "34e73e00fd684e07610d0cb85d0a986bcd3cb54c54b37fd79869e78e5cf13b98"
+      },
+      {
+        "name": "audit",
+        "command": "npm audit --omit=dev --json",
+        "at": "2026-10-08T11:38:36.652Z",
+        "finished": "2026-10-08T11:38:38.060Z",
+        "exitCode": 0,
+        "sha256": "71bb55dc3bb3b98fc73d60e98d7711e69fa498e998239863bdd9c4b5c8b8eca1"
+      }
+    ],
+    "unitTests": 118,
+    "rawLogStorage": "Retained locally; digests identify the original output."
+  },
+  "extractedPackageSmoke": {
+    "applicationCommit": "56218638e8edf6a3494cee22671b301f3a36ee79",
+    "checks": [
+      {
+        "name": "build",
+        "command": "npm run arc:build",
+        "at": "2026-10-08T11:50:24.006Z",
+        "finished": "2026-10-08T11:50:40.202Z",
+        "exitCode": 0,
+        "sha256": "593611b72ad0428c76f14a1be374495da20ce1fdcd82f67b669d8aa8e9df2cd2"
+      },
+      {
+        "name": "client",
+        "command": "npm run arc:client:typecheck",
+        "at": "2026-10-08T11:50:40.208Z",
+        "finished": "2026-10-08T11:50:41.676Z",
+        "exitCode": 0,
+        "sha256": "5c681c685b68667b4963456c53c81c661edf5382632c611194541cc5ea43d905"
+      },
+      {
+        "name": "replay",
+        "command": "node --import tsx examples/arc-task-ledger/replay-bundle.ts docs/arc-task-ledger/settlement-verifier/evidence/real-matched-bundle.json",
+        "at": "2026-10-08T11:50:41.682Z",
+        "finished": "2026-10-08T11:50:46.482Z",
+        "exitCode": 0,
+        "sha256": "8d81aa32adda221c09f67cdf24a407f6bb8ea4238aad44692c4c10a8b2b8b1c2"
+      }
+    ],
+    "newDocumentationHasNoExecutableChanges": true
+  },
+  "scopedBrowser": {
+    "checks": [
+      {
+        "name": "arc-browser",
+        "command": "npm run arc:test:e2e",
+        "at": "2026-10-08T11:41:44.952Z",
+        "finished": "2026-10-08T11:43:22.118Z",
+        "exitCode": 0,
+        "sha256": "c6ac19564b9e10e2c29deb61adaff8601c5e748ba4dd9cbbcb309a9bef747f0c"
+      }
+    ],
+    "passed": 40
+  },
+  "scopedDatabase": {
+    "checks": [
+      {
+        "name": "arc-integration",
+        "command": "npm run arc:test:integration",
+        "at": "2026-10-08T11:38:46.955Z",
+        "finished": "2026-10-08T11:38:55.876Z",
+        "exitCode": 0,
+        "sha256": "df0a53937f88227e8a7efe92201700216d737cccb545e896b9bfde4c8531acb2"
+      }
+    ],
+    "passed": 43,
+    "databaseIsolation": true
+  },
+  "publicDeployment": {
+    "at": "2026-10-08T11:49:41.752Z",
+    "url": "https://web--atl-web--xtd599t97njk.code.run",
+    "deploymentCommit": "56218638e8edf6a3494cee22671b301f3a36ee79",
+    "health": {
+      "status": "UP",
+      "components": {
+        "readOnly": true,
+        "version": "atl-v1.2.1",
+        "interfaceVersion": "atl-ui-v1.4.3",
+        "verifierInterfaceVersion": "zasv-interface-v1",
+        "verifierRuleVersion": "zasv-rules-v1.0.0",
+        "schemaMigration": 7,
+        "releaseVersion": "2.0.0",
+        "sourceCommit": "56218638e8edf6a3494cee22671b301f3a36ee79"
+      }
+    },
+    "resources": [
+      {
+        "id": "atl-api",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "plan": "nf-compute-10",
+        "status": {
+          "build": {
+            "status": "SUCCESS",
+            "lastTransitionTime": "2026-10-08T11:46:07.194Z"
+          },
+          "deployment": {
+            "status": "COMPLETED",
+            "reason": "DEPLOYING",
+            "lastTransitionTime": "2026-10-08T11:47:24.613Z"
+          }
+        },
+        "instances": 1
+      },
+      {
+        "id": "atl-web",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "plan": "nf-compute-10",
+        "status": {
+          "build": {
+            "status": "SUCCESS",
+            "lastTransitionTime": "2026-10-08T11:46:02.720Z"
+          },
+          "deployment": {
+            "status": "COMPLETED",
+            "reason": "DEPLOYING",
+            "lastTransitionTime": "2026-10-08T11:49:08.897Z"
+          }
+        },
+        "instances": 1
+      },
+      {
+        "id": "atl-migrate",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "plan": "nf-compute-10",
+        "suspended": true
+      },
+      {
+        "id": "atl-sync",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "plan": "nf-compute-10",
+        "suspended": false
+      },
+      {
+        "id": "atl-postgres",
+        "status": "running"
+      }
+    ],
+    "assets": [
+      {
+        "asset": "/assets/index-BW630YuO.js",
+        "sha256": "8004695041898ad66b13a8b3538b31dfabffd980767b671820abc46ef3e5ad16"
+      },
+      {
+        "asset": "/assets/index-DWTPjzVM.css",
+        "sha256": "5a8b693ca171e23fc81cbdc3f1d8ff0c3a743ada1e12e3a8bbcf609f7014b2c0"
+      },
+      {
+        "asset": "/brand/bundlemark-icon.png",
+        "sha256": "b14b694208d8b73e5214f8163aa2bcf04dfc3b9cb6538beb3a8c5ea2860522ac"
+      },
+      {
+        "asset": "/brand/bundlemark-wordmark.png",
+        "sha256": "0aa5fe76afae3c269aa5a88875da665a2b0cbb4681703c0dfb14b7597770c4bf"
+      }
+    ],
+    "reports": [
+      {
+        "id": "zasv_4e98a1e6aa85fde1870dd8002e68bef25e7f0528de83d08db5978f01c88fe148",
+        "bundleHash": "8f2e7979f0b618bc7703ba5ec0617429c663430c2f4b076ec8b99377e76f9ac5",
+        "sha256": "92b44023e36916724e3d71d6d693fc984efaed2ef6d6c5413364e81a621a44b3"
+      },
+      {
+        "id": "zasv_0036ede4021eec0190fa5fae5d68fd2c4908a29a77f40e60554b365226ed177f",
+        "bundleHash": "6d21dd2ed6c7487f984fb39fe693c2dea0c740bd9c751045c05300f161922e20",
+        "sha256": "713c2578f7fffe034a1da9d7048f869ea9b9d32efb20ea2081f785f3eb203672"
+      }
+    ],
+    "task": {
+      "path": "/v1/jobs/5042/0x73c617e808ed5c7ca41413dfc6ee940ddcbb0b8d/18?snapshotRunId=run_31d0b702348917f7416b0110b8ae4e64",
+      "resultHash": "736c85204e5961a85839116e34c4b76afd51b458993f5cd8423e42a95392e516",
+      "evidenceHash": "4da0e6e1b21a67af04cdd0069c402421f19f11f94d21ef4c11eebf2291ce70da",
+      "snapshotHash": "b24089a196ed7de1f623657e03e18a2d04b8d57269eb89c8e8b5ca410a61e61f"
+    },
+    "oldCursorStillValid": true,
+    "usage": [
+      {
+        "currency": "usd",
+        "total": 0
+      }
+    ]
+  },
+  "futureBuildSource": {
+    "at": "2026-10-08T12:00:52.100Z",
+    "services": [
+      {
+        "id": "atl-api",
+        "vcsData": {
+          "projectUrl": "https://github.com/greywolf8888/BundleMark-Arc-Transaction-Report-Verifier",
+          "projectType": "github",
+          "projectBranch": "main",
+          "dockerFilePath": "/infra/northflank/Dockerfile",
+          "dockerWorkDir": "/"
+        },
+        "buildSource": "git",
+        "status": "COMPLETED",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "instances": 1,
+        "plan": "nf-compute-10"
+      },
+      {
+        "id": "atl-web",
+        "vcsData": {
+          "projectUrl": "https://github.com/greywolf8888/BundleMark-Arc-Transaction-Report-Verifier",
+          "projectType": "github",
+          "projectBranch": "main",
+          "dockerFilePath": "/infra/northflank/Dockerfile",
+          "dockerWorkDir": "/"
+        },
+        "buildSource": "git",
+        "status": "COMPLETED",
+        "sha": "56218638e8edf6a3494cee22671b301f3a36ee79",
+        "instances": 1,
+        "plan": "nf-compute-10"
+      }
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "endpoint": "/v1/projects/arctrace/services/atl-api",
+        "attempt": 0,
+        "status": 200
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v1/projects/arctrace/services/combined/atl-api",
+        "attempt": 0,
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v1/projects/arctrace/services/atl-api",
+        "attempt": 0,
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v1/projects/arctrace/services/atl-web",
+        "attempt": 0,
+        "status": 200
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v1/projects/arctrace/services/combined/atl-web",
+        "attempt": 0,
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v1/projects/arctrace/services/atl-web",
+        "attempt": 0,
+        "status": 200
+      }
+    ]
+  },
+  "browserObservation": {
+    "at": "2026-10-08T12:03:50.287428+00:00",
+    "englishReadmeContainsChinese": false,
+    "englishReadmeContainsUnrelatedProjectName": false,
+    "readmeImagesLoaded": true,
+    "websiteIconOriginalShown": true,
+    "explicitChinesePersistsOnReload": true,
+    "finalWebsiteLanguage": "English"
+  },
+  "mainnetNewTransactionAcceptance": "NOT_RERUN_FOR_BRANDING",
+  "grantApplication": "NOT_SUBMITTED"
+}

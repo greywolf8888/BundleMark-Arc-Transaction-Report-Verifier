@@ -62,7 +62,7 @@ Download a bundle from a report you can access. Historical mainnet bundles in th
 - API: [Contract, errors, and quotas](docs/arc-task-ledger/settlement-verifier/API.md) · [OpenAPI](docs/arc-task-ledger/settlement-verifier/openapi.json) · [Client](examples/arc-task-ledger/verifier-client.ts)
 - Consumers: [Example notes](examples/arc-task-ledger/README.zh-CN.md) · [Offline replay](examples/arc-task-ledger/replay-bundle.ts) · [Reconciliation](examples/arc-task-ledger/reconcile.ts)
 - Boundaries: [Known limitations](docs/arc-task-ledger/settlement-verifier/KNOWN_LIMITATIONS.md) · [Current release](docs/arc-task-ledger/settlement-verifier/CURRENT_RELEASE.md)
-- Provenance: [18 original independent commits](docs/project/HISTORY.json) · [Original asset digests](docs/project/ORIGINAL_ASSETS.json) · [Current delivery](docs/project/DELIVERY.zh-CN.md)
+- Provenance: [18 original independent commits](docs/project/HISTORY.json) · [Original asset digests](docs/project/ORIGINAL_ASSETS.json) · [Current delivery](docs/project/DELIVERY.en.md)
 - Collaboration: [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [License](LICENSE) · [Attribution](NOTICE)
 
 ## Interpreting a result
