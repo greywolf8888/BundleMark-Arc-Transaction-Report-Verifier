@@ -15,3 +15,8 @@ MATCHED 仅代表所选资金边符合冻结条件。用途、事前约定、订
 本次界面以英文默认，用户选择的中文/英文统一覆盖 Arc 页面并持久化；原件与协议标识保持原文。新版操作与修复范围见 [UI_REPAIR_20261007.md](UI_REPAIR_20261007.md)，本次独立验证与部署收据见 [UI_DELIVERY_20261007.md](UI_DELIVERY_20261007.md)。此前 VALIDATION.json 和 HANDOFF.md 保留为 2.0.0 首次交付记录，不能替代本次验证。资金规则、报告规则、迁移7保持。
 
 最终界面运行版本为 `atl-ui-v1.4.1`，实际源码bf0a91e、部署a9d5adf。实际新交易、反例、重查、双语/手机、旧报告与独立消费记录见 [UI_DEPLOYMENT_20261007.md](UI_DEPLOYMENT_20261007.md) 和 UI_PUBLIC_VALIDATION_20261007.json。此前1.4.0为中间发布，不代表最终补丁部署。
+
+
+## 2026-10-08 BundleMark 品牌 atl-ui-v1.4.3
+
+第二张用户原图用于网站图标、favicon 与仓库首页，第一张原图保存为 wordmark。新增英文默认、中英互链项目介绍与运行说明；源码链接指向独立 BundleMark 仓库。资金规则、解析器、报告和迁移7保持。18 个原始独立部署提交保留 SHA 按顺序逐个推送；本轮证据见 ../../project/DELIVERY.zh-CN.md，历史门禁不自动继承。

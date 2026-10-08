@@ -1,0 +1,12 @@
+node_modules/
+**/dist/
+**/.types/
+.agent-state/
+playwright-report/
+test-results/
+package-lock.json
+release-manifest.json
+docs/arc-task-ledger/validation/
+docs/arc-task-ledger/settlement-verifier/evidence/
+docs/project/HISTORY_AUDIT.json
+docs/project/evidence/

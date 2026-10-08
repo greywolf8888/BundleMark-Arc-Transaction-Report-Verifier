@@ -1,0 +1,18 @@
+{
+  "assets": [
+    {
+      "path": "apps/arc-task-ledger-web/public/brand/bundlemark-wordmark.png",
+      "sha256": "0aa5fe76afae3c269aa5a88875da665a2b0cbb4681703c0dfb14b7597770c4bf",
+      "bytes": 1230791,
+      "origin": "User-supplied original image, copied without modification"
+    },
+    {
+      "path": "apps/arc-task-ledger-web/public/brand/bundlemark-icon.png",
+      "sha256": "b14b694208d8b73e5214f8163aa2bcf04dfc3b9cb6538beb3a8c5ea2860522ac",
+      "bytes": 1348368,
+      "origin": "User-supplied original image, copied without modification"
+    }
+  ],
+  "primaryIcon": "bundlemark-icon.png",
+  "wordmark": "bundlemark-wordmark.png"
+}

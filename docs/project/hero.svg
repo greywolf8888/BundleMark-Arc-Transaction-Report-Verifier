@@ -1,0 +1,66 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="360"
+  viewBox="0 0 1200 360"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">BundleMark — Arc Transaction Report Verifier</title>
+  <desc id="desc">
+    Read-only verification, immutable reports, independent replay. Read, compare, export, replay.
+  </desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#101b04" />
+      <stop offset="1" stop-color="#050803" />
+    </linearGradient>
+    <linearGradient id="line">
+      <stop stop-color="#b7ff00" stop-opacity="0.1" />
+      <stop offset="0.6" stop-color="#b7ff00" />
+      <stop offset="1" stop-color="#b7ff00" stop-opacity="0.3" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#b7ff00" stroke-opacity="0.055" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="360" rx="18" fill="url(#background)" />
+  <rect width="1200" height="360" rx="18" fill="url(#grid)" />
+  <path d="M20 0H1180L1200 20V340L1180 360H20L0 340V20Z" fill="none" stroke="#6b8a24" />
+  <g fill="none" stroke="url(#line)" stroke-width="1.4">
+    <path d="M760 70C885 70 875 180 1060 180" />
+    <path d="M760 100C860 100 925 180 1060 180" />
+    <path d="M760 130C870 130 910 180 1060 180" />
+    <path d="M760 160C870 160 945 180 1060 180" />
+    <path d="M760 200C870 200 945 180 1060 180" />
+    <path d="M760 230C870 230 910 180 1060 180" />
+    <path d="M760 260C860 260 925 180 1060 180" />
+    <path d="M760 290C885 290 875 180 1060 180" />
+    <circle cx="1060" cy="180" r="61" />
+    <circle cx="1060" cy="180" r="72" />
+    <circle cx="1060" cy="180" r="83" />
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="55" y="65" fill="#b7ff00" font-size="13" font-weight="700" letter-spacing="3">
+      ARC TRANSACTION REPORT VERIFIER
+    </text>
+    <text x="52" y="141" fill="#f0f7dd" font-size="68" font-weight="700" letter-spacing="-2">
+      BundleMark
+    </text>
+    <text x="55" y="188" fill="#aab997" font-size="20">
+      Evidence you can inspect. Reports you can replay.
+    </text>
+    <g fill="#b7ff00" font-size="14" font-weight="700">
+      <text x="55" y="246">01 READ</text>
+      <text x="215" y="246">02 COMPARE</text>
+      <text x="405" y="246">03 EXPORT</text>
+      <text x="575" y="246">04 REPLAY</text>
+    </g>
+    <path d="M55 266H690" stroke="#b7ff00" stroke-opacity="0.4" />
+    <text x="55" y="309" fill="#aab997" font-size="14">
+      READ-ONLY CHAIN ACCESS / IMMUTABLE REPORTS / EXACT USDC AMOUNTS
+    </text>
+    <text x="1060" y="174" fill="#b7ff00" font-size="13" text-anchor="middle">CHECK</text>
+    <text x="1060" y="194" fill="#d8e9b7" font-size="12" text-anchor="middle">EVIDENCE</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+node_modules/
+**/dist/
+**/.types/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.agent-state/
+playwright-report/
+test-results/
+dist-public/
+*.sqlite
+*.sqlite-*
+*.private
