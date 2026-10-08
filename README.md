@@ -73,6 +73,6 @@ Private ownership depends on the original seven-day browser session. Cookie loss
 
 ## Releases and provenance
 
-BundleMark originates from ZeroTrace's independent Arc deployment source closure. Its 18 original commits are retained in order with unchanged SHAs. The entire ZeroTrace development history is not imported; shared schema and evidence packages needed by Arc remain included. New branding changes presentation, interface metadata, repository links, and documentation. Financial rules, historical reports, fixed snapshots, and pagination secrets retain their existing authorities.
+BundleMark is a standalone Arc transaction report verifier. This repository contains the application, API, verifier, evidence utilities, tests, and independent client examples needed to build and run it. Versioned releases retain their commit history. Financial rules, historical reports, fixed snapshots, and pagination secrets remain stable across presentation updates.
 
 Historical validation documents are dated and source-bound; they are not proof that every gate passes on a new release. New checks are recorded separately. BundleMark does not imply official Arc certification, grant approval, human approval, or upstream adoption. The default data-procurement budget is zero. This repository does not submit a grant application on the user's behalf.

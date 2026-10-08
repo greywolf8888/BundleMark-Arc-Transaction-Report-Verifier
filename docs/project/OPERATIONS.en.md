@@ -21,7 +21,7 @@ Configure environment variables through your shell or secret manager; the applic
 - `ARC_API_PORT`: default 8087; `ARC_API_HOST`: default loopback.
 - Optional registered `ARC_RPC_URL` / `ARC_PROVIDER_ALIAS`: use versioned registered sources; do not invent endpoints or purchase provider access.
 
-Start `npm run arc:start`. In a second terminal run `npm run dev -w @zerotrace/arc-task-ledger-web -- --host 127.0.0.1 --port 5178`. The development frontend proxies `/api` to port 8087; set `ARC_API_PROXY` if your API port differs. Real transaction acquisition is bounded and read-only. Legacy task collection uses a separate `npm run arc:worker` process and explicit scan budgets; it is unnecessary for offline replay.
+Start `npm run arc:start`. In a second terminal run `npm run dev --workspace ./apps/arc-task-ledger-web -- --host 127.0.0.1 --port 5178`. The development frontend proxies `/api` to port 8087; set `ARC_API_PROXY` if your API port differs. Real transaction acquisition is bounded and read-only. Legacy task collection uses a separate `npm run arc:worker` process and explicit scan budgets; it is unnecessary for offline replay.
 
 For a production frontend, use the supplied Dockerfile/web target and same-origin reverse proxy. The inherited Compose template refers to an old export directory and does not provision the new request-write roles; do not treat it as a turnkey verifier deployment. Current hosted release receipts are the source of actual cloud configuration facts. Keep database volumes, secrets, and permissions stable.
 

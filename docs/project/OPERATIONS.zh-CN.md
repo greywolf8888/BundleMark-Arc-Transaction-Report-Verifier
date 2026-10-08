@@ -21,7 +21,7 @@
 - `ARC_API_PORT`：默认 8087；`ARC_API_HOST`：默认回环地址。
 - 可选 `ARC_RPC_URL` / `ARC_PROVIDER_ALIAS`：使用已登记和版本化来源，不猜测接口或购买访问。
 
-执行 `npm run arc:start`；另一个终端执行 `npm run dev -w @zerotrace/arc-task-ledger-web -- --host 127.0.0.1 --port 5178`。开发网页将 `/api` 代理至 8087，其他端口需设置 `ARC_API_PROXY`。真实交易采集有界、只读。旧任务采集是单独的 `npm run arc:worker` 进程，遵守显式扫描预算，离线复算无需启动它。
+执行 `npm run arc:start`；另一个终端执行 `npm run dev --workspace ./apps/arc-task-ledger-web -- --host 127.0.0.1 --port 5178`。开发网页将 `/api` 代理至 8087，其他端口需设置 `ARC_API_PROXY`。真实交易采集有界、只读。旧任务采集是单独的 `npm run arc:worker` 进程，遵守显式扫描预算，离线复算无需启动它。
 
 生产使用现有 Dockerfile 的 web target 与同源反代。继承的 Compose 模板引用旧导出目录，也没有配置新的请求写入角色，不能当作开箱即用的核验器部署。实际云配置以当前交付证据为准。保留卷、密钥与权限。
 

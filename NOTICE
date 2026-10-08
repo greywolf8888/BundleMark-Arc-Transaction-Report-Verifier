@@ -1,4 +1,4 @@
-ZeroTrace Arc Task Ledger
-原创组件及所选 ZeroTrace 核心使用 Apache-2.0。
+BundleMark — Arc Transaction Report Verifier
+本项目组件使用 Apache-2.0。
 ArcBounty 部署 ABI/接口来自 MIT 项目 Sofiia7/ARC，版权声明见 docs/arc-task-ledger/UPSTREAM_LICENSE.txt。
 chain-adapters 导出仅保留原 transport/security/errors 源文件，未复制上游资金操作实现。
